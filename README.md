@@ -49,6 +49,9 @@ intentionally left out so the template starts clean.
 
 - [x] Generalize `CLAUDE.md` into a project-agnostic archivist template (strip
       the project-specific framing into an optional overlay).
+- [ ] Add a guided onboarding interview — Claude asks the user questions about
+      their research (project, reference docs, tags, folders) to properly
+      configure the Archivist, writing `Vault Context.md` from the answers.
 - [ ] Package the reorganization workflow as a custom **skill**.
 - [ ] Add a reorganization **agent** for autonomous passes.
 - [ ] Document setup for non-Obsidian knowledge bases.
