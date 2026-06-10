@@ -1,0 +1,6 @@
+# Claude Code per-machine local settings — personal permission allowlist.
+# Each clone generates its own; it must never be committed by anyone.
+.claude/settings.local.json
+
+# macOS
+.DS_Store
