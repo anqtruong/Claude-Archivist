@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# SessionStart hook — git status snapshot for the SCADA vault.
+# SessionStart hook — git status + vault-setup snapshot for an Archivist vault.
 # Best-effort only: never block or fail session startup.
 # Emits JSON with hookSpecificOutput.additionalContext so the report is
 # injected into Claude's context (plain stdout is the fallback if jq is absent).
@@ -92,6 +92,20 @@ if command -v gh >/dev/null 2>&1 && command -v jq >/dev/null 2>&1; then
       [ -n "$line" ] && add "Open PR awaiting merge: ${line}"
     done <<< "$open_prs"
   fi
+fi
+
+# Vault-setup state — does the Archivist's expected structure exist yet?
+# Drives the "auto-detect + offer" first-run setup in CLAUDE.md. The MOC name is
+# customizable via the project overlay, so match any "*MOC.md" rather than a fixed
+# filename.
+missing=""
+[ -d "Unorganized Notes" ] || missing="${missing}Unorganized Notes/, "
+ls *MOC.md >/dev/null 2>&1 || missing="${missing}a *MOC.md, "
+[ -f "Tag Index.md" ] || missing="${missing}Tag Index.md, "
+if [ -n "$missing" ]; then
+  add "Vault structure not set up (missing: ${missing%, }) — offer to scaffold (CLAUDE.md → Vault setup) before reorganizing."
+else
+  add "Vault structure present (inbox, MOC, Tag Index)."
 fi
 
 # Two channels, on purpose:
