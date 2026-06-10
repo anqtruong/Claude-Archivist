@@ -9,9 +9,9 @@
 
 This is a research vault for a graduate literature review. It holds reading notes on the key papers in the field and a running log of experiments, kept organized so the thesis can be written straight from the notes.
 
-## Reference-only sources
+## Reference-only sources outside `References/`
 
-`Field Survey.pdf` (at the vault root) is **reference-only context**. You **may read it** to understand the field and answer my questions as I research — that's what it's there for. What you must **never** do is turn it into vault content: don't parse, OCR, extract, quote, or summarize it *into notes*, and don't create or derive any vault note from it. Read it for your own understanding; never reorganize it into the vault. My reading notes on the survey come from *my* notes in `Unorganized Notes/`, never from this file. If a future PDF or document should be treated the same way, I'll tell you.
+All my source papers — including the field survey — live in `References/`, so they're reference-only by default and nothing needs listing here. (If I kept a reference doc elsewhere, say a textbook PDF at the vault root, I'd note it here.)
 
 ## MOC name
 
@@ -31,6 +31,7 @@ This is a starting set, not a cap — it grows over time, but only by the propos
 
 ## Folder names
 
-- `Reference/` — background concepts and summaries of the literature.
+- `References/` — source papers, including the field survey (reference-only).
+- `Background/` — my notes summarizing concepts and the literature.
 - `Project/` — plan, schedule, objectives, and the experiment log.
 - New top-level folders as genuinely new categories appear (e.g. `Experiments/`, `Drafts/`); update the MOC when you do.

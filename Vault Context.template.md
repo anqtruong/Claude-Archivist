@@ -12,13 +12,13 @@
 
 <One or two sentences: what this vault is, what the project is, who it's for.>
 
-## Reference-only sources
+## Reference-only sources outside `References/`
 
-<List any source documents that are context, not content — Claude may read them to
-understand the domain but must never derive vault notes from them. Leave empty if
-there are none.>
+<Everything in the `References/` folder is reference-only by default, so usually
+this is empty. Only list a document here if you keep it somewhere other than
+`References/` and want it treated the same way.>
 
-- `<filename>` — <why it's reference-only>
+- `<path>` — <why it's reference-only>
 
 ## MOC name
 

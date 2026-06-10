@@ -41,7 +41,8 @@ intentionally left out so the template starts clean.
 2. Open the folder with Claude Code. The `SessionStart` hook runs and reports
    git/PR status and whether the Archivist structure exists yet.
 3. On a fresh vault, Claude offers to set it up — creating `Unorganized Notes/`,
-   the MOC, `Tag Index.md`, and a `Vault Context.md` overlay for you to fill in.
+   `References/` (drop reference docs here), the MOC, `Tag Index.md`, and a
+   `Vault Context.md` overlay for you to fill in.
 4. Ask for a reorganization pass.
 
 ## Roadmap

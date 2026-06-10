@@ -6,7 +6,7 @@ This guide is project-agnostic. Anything specific to *this* vault lives in the p
 
 ## Project overlay: `Vault Context.md`
 
-What makes *this* vault specific — what the project is, which files are reference-only, the starting tag menu, custom folder names — lives in `Vault Context.md` at the vault root. If that file exists, read it at the start of every pass and treat its rules as layered on top of this guide; where it is more specific (e.g. it names a real reference-only document), it wins. If it doesn't exist, fall back to the generic defaults here. See `examples/Vault Context (example).md` for a worked example.
+What makes *this* vault specific — what the project is, the starting tag menu, custom folder names — lives in `Vault Context.md` at the vault root. If that file exists, read it at the start of every pass and treat its rules as layered on top of this guide; where it is more specific (e.g. it pins a custom MOC name or tag menu), it wins. If it doesn't exist, fall back to the generic defaults here. See `examples/Vault Context (example).md` for a worked example.
 
 ## Vault setup (first run)
 
@@ -16,19 +16,20 @@ When you start in a vault that doesn't yet have the archivist's structure, set i
 
 **What to scaffold** — only the missing pieces, never overwrite what already exists:
 - `Unorganized Notes/` — the capture inbox (read-only thereafter). Seed it with a short note explaining its role so the folder isn't empty.
+- `References/` — the home for source documents (PDFs, specs, papers); everything inside is reference-only (see below). Create it as the obvious place to drop reference docs.
 - `Vault MOC.md` — the front-door map of content, seeded with empty section headers and a reading-progress section.
 - `Tag Index.md` — the approved tag menu, seeded empty (tags grow by propose-and-wait).
-- `Vault Context.md` — the project overlay, seeded from `Vault Context.template.md` with placeholders for me to fill in. If I'm willing to answer a few questions (project name, any reference-only files, expected folders), capture my answers into it instead of leaving placeholders.
+- `Vault Context.md` — the project overlay, seeded from `Vault Context.template.md` with placeholders for me to fill in. If I'm willing to answer a few questions (project name, expected folders), capture my answers into it instead of leaving placeholders.
 
-Organized category folders (`Reference/`, `Project/`, …) are **not** scaffolded up front — they emerge from content during the first reorg pass, named after the themes that actually show up.
+Organized category folders (`Background/`, `Project/`, …) are **not** scaffolded up front — they emerge from content during the first reorg pass, named after the themes that actually show up.
 
 Do setup on a branch, commit each file with a `setup:` prefix, and summarize what you created, same as any pass.
 
-## Reference-only sources
+## Reference-only sources: `References/`
 
-Some vaults include source documents — a report, a spec, a paper — that are **context, not content**. A reference-only file is one you **may read** to understand the domain and answer my questions, but must **never** turn into vault notes: don't parse, OCR, extract, quote, or summarize it *into* notes, and don't create or derive any vault note from it. My notes on such a source come from *my own* capture in `Unorganized Notes/`, never from the source file itself.
+Source documents — PDFs, specs, papers, anything I keep as background — go in the `References/` folder, and **everything in it is context, not content**. You **may read** any reference doc to understand the domain and answer my questions, but must **never** turn it into vault notes: don't parse, OCR, extract, quote, or summarize it *into* notes, and don't create or derive any vault note from it. My notes on a reference come from *my own* capture in `Unorganized Notes/`, never from the source file itself.
 
-Which files are reference-only is project-specific — it's declared in `Vault Context.md`. If none is declared, assume nothing is reference-only; but if you're about to derive notes from a large source document you didn't see me capture, stop and ask first.
+The folder is the rule — drop in as many documents as I like and they're all reference-only, no per-file declaration needed. If I keep a reference doc somewhere other than `References/`, I'll flag it in `Vault Context.md`. Either way, if you're ever about to derive notes from a source document you didn't see me capture, stop and ask first.
 
 ## Prime directive: reorganize, never rewrite
 
@@ -78,8 +79,9 @@ Type is carried by the **folder** a note lives in, so tags never repeat it. Tags
 
 ## Folder structure
 
-- `Unorganized Notes/` — capture inbox. **Read-only** (see above).
-- Organized category folders carry the "what kind" job — one per genuine category, created as themes emerge (e.g. `Reference/`, `Project/`, `Specification/`). `Vault Context.md` may pin specific names; otherwise name them after the content.
+- `Unorganized Notes/` — capture inbox (my raw notes). **Read-only** (see above).
+- `References/` — source documents (PDFs, specs, papers). **Reference-only** (see above): read for context, never derive notes from.
+- Organized category folders carry the "what kind" job — one per genuine category, created as themes emerge (e.g. `Background/`, `Project/`, `Specification/`). `Vault Context.md` may pin specific names; otherwise name them after the content.
 - Add a new top-level folder only when a genuinely new category appears, and update the MOC when you do.
 
 ## Git workflow
